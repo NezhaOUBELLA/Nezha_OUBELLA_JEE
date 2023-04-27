@@ -54,4 +54,10 @@ public class PatientController implements ErrorController {
         return patientRepository.findAll();
     }
 
+    @GetMapping("/formPatients")
+    public String formPatients(Model model){
+        model.addAttribute("patient",new Patient());
+        return "formPatients";
+    }
+
 }
